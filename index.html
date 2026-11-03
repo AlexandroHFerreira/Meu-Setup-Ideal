@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeuSetup Ideal — O setup perfeito começa aqui</title>
+  <meta name="description" content="Monte o setup ideal para jogar, criar ou programar. Guias, dicas e listas prontas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow" id="glow" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav-wrap">
+    <nav class="nav" id="nav">
+      <a href="#topo" class="nav__brand">
+        <span style="font-weight:800; font-size:1.2rem; color:var(--p1);">Meu<b>Setup</b></span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#perfis">Perfis</a></li>
+        <li><a href="#quiz-sec">Quiz</a></li>
+        <li><a href="#lista-sec">Lista de Compras</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <a href="#lista-sec" class="pill">Montar lista</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main id="topo">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <span class="badge"><i></i> Novo • Guia de setups 2026</span>
+          <h1>O setup <em>ideal</em> para quem leva o seu espaço a sério.</h1>
+          <p>Jogue melhor, crie mais e programe com conforto. A gente mostra o que comprar, em que ordem e quanto vale a pena gastar.</p>
+          <div class="hero__cta">
+            <a href="#quiz-sec" class="btn btn--primary">Descubra o seu <span>→</span></a>
+            <a href="#lista-sec" class="btn btn--glass">Ver listas prontas</a>
+          </div>
+          <div class="trust">
+            <div class="avatars"><span>🎮</span><span>🎨</span><span>💻</span></div>
+            <p><strong>+3 perfis</strong> prontos para você começar hoje</p>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="orb"></div>
+          <div class="logo-card tilt">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Setup Gamer de Alta Performance">
+          </div>
+          <div class="chip chip--a"><b>144 Hz</b><small>Monitor</small></div>
+          <div class="chip chip--b"><b>RGB</b><small>Iluminação</small></div>
+          <div class="chip chip--c"><b>Ergonomia</b><small>Conforto total</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Gamer</span><span>✦</span><span>Criativo</span><span>✦</span><span>Programador</span><span>✦</span><span>Monitor</span><span>✦</span><span>Teclado</span><span>✦</span><span>Headset</span><span>✦</span><span>Ergonomia</span><span>✦</span>
+        <span>Gamer</span><span>✦</span><span>Criativo</span><span>✦</span><span>Programador</span><span>✦</span><span>Monitor</span><span>✦</span><span>Teclado</span><span>✦</span><span>Headset</span><span>✦</span><span>Ergonomia</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- QUIZ -->
+    <section class="section" id="quiz-sec">
+      <div class="container">
+        <header class="head reveal">
+          <span class="badge" style="margin-bottom:1rem;">Quiz rápido</span>
+          <h2>Descubra o <em>setup ideal</em> para você</h2>
+          <p>Três perguntas e você recebe uma recomendação personalizada.</p>
+        </header>
+
+        <div class="quiz-card reveal" id="quizContainer">
+          <div class="quiz-progress"><div class="quiz-progress-bar" id="quizProgress"></div></div>
+          
+          <div id="quizContent">
+            <!-- Renderizado via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LISTA DE COMPRAS -->
+    <section class="section section--dark" id="lista-sec">
+      <div class="container">
+        <header class="head reveal">
+          <h2>Monte a sua <em>lista de compras</em></h2>
+          <p>Escolha o perfil, marque os itens e acompanhe o total estimado. Os valores são referências aproximadas em reais.</p>
+        </header>
+
+        <div class="lista-layout reveal">
+          <!-- Esquerda: Abas e Lista -->
+          <div class="lista-main">
+            <div class="lista-tabs" id="listaTabs">
+              <button class="tab active" data-profile="gamer">Gamer</button>
+              <button class="tab" data-profile="criativo">Criativo</button>
+              <button class="tab" data-profile="dev">Programador</button>
+            </div>
+            <div class="lista-items" id="listaItems">
+              <!-- Renderizado via JS -->
+            </div>
+          </div>
+
+          <!-- Direita: Resumo -->
+          <div class="lista-sidebar">
+            <div class="summary-card">
+              <h3>Sua lista</h3>
+              <ul class="summary-items" id="summaryItems">
+                <li class="empty">Nenhum item selecionado.</li>
+              </ul>
+              
+              <div class="summary-total">
+                <span>Total estimado</span>
+                <strong id="summaryTotalValue">R$ 0,00</strong>
+              </div>
+
+              <div class="summary-budget">
+                <label for="budgetInput">Meu orçamento</label>
+                <input type="number" id="budgetInput" placeholder="Ex.: 5000">
+                <p id="budgetStatus">Defina um orçamento para acompanhar.</p>
+              </div>
+
+              <div class="summary-actions">
+                <button class="btn btn--primary" style="padding:.8rem 1.2rem;" id="btnCopyList">Copiar lista</button>
+                <button class="btn btn--glass" style="padding:.8rem 1.2rem;" id="btnClearList">Limpar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NÚMEROS -->
+    <section class="section" id="numeros">
+      <div class="container">
+        <div class="numbers reveal">
+          <div><strong data-count="3">0</strong><span>perfis completos</span></div>
+          <div><strong data-count="24" data-suffix="+">0</strong><span>itens para comparar</span></div>
+          <div><strong data-count="100" data-suffix="%">0</strong><span>gratuito</span></div>
+          <div><strong data-count="4">0</strong><span>dicas essenciais</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO / CTA -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta__glow"></div>
+          <h2>Pronto para montar o <em>seu</em>?</h2>
+          <p>Deixe seu e-mail e receba ideias de setups, dicas de compra e novidades.</p>
+          <form id="form" class="form" novalidate>
+            <input type="email" id="email" placeholder="seu@email.com" aria-label="Seu e-mail" required>
+            <button class="btn btn--primary" type="submit">Quero receber</button>
+          </form>
+          <p class="form__msg" id="msg" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__in">
+      <span style="font-weight:800; font-size:1.1rem;">Meu<b>Setup</b> Ideal</span>
+      <p>© <span id="year"></span> MeuSetup Ideal. Todos os direitos reservados.</p>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
